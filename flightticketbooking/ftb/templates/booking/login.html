@@ -1,0 +1,16 @@
+{% extends 'booking/base.html' %}
+
+{% block content %}
+  <h2>User Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+  <p>Don't have an account? <a href="{% url 'ftb:user_register' %}">Register here</a>.</p>
+
+
+  <h1> Current admin--username-":  "Jprakash"</h1>
+  <h1>Password--:                  "Jprakash02"</h1>
+  <h1>Login as admin to add more admins</h1>
+{% endblock %}
